@@ -26,13 +26,13 @@ mpicxx -o BTS bts.cpp -O3 -lpthread
 8   9
 ```
 
-- convert tsv file to binary file
+- Convert tsv file to binary file
 ```bash
 g++ -o txttobin txttobin.cpp
 ./txttobin input.tsv input.bin
 ```
 
-- prepare hosts file: list all the machines in the file
+- Prepare hosts file: list all the machines to the file
 - example (hosts)
 ```
 n00
@@ -41,7 +41,7 @@ n02
 n03
 ```
 
-- execute BTS
+- Execute BTS
 ```bash
 mpirun -np numberofprocessors --hostfile yourhostsfile ./BTS /input/path/ maximumvertexvalue
 ```
