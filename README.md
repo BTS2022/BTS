@@ -32,6 +32,15 @@ g++ -o txttobin txttobin.cpp
 ./txttobin input.tsv input.bin
 ```
 
+- prepare hosts file: list all the machines in the file
+- example (hosts)
+```
+n00
+n01
+n02
+n03
+```
+
 - execute BTS
 ```bash
 mpirun -np numberofprocessors --hostfile yourhostsfile ./BTS /input/path/ maximumvertexvalue
