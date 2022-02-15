@@ -29,12 +29,16 @@ mpicxx -o BTS bts.cpp -O3 -lpthread
 - convert tsv file to binary file
 ```bash
 g++ -o txttobin txttobin.cpp
-./txttobin input.txt input.bin
+./txttobin input.tsv input.bin
 ```
 
 - execute BTS
 ```bash
-mpirun -np 10 --hostfile yourhostsfile ./a.out /input/path/
+mpirun -np numberofprocessors --hostfile yourhostsfile ./BTS /input/path/ maximumvertexvalue
+```
+- example
+```bash
+mpirun -np 10 --hostfile hosts ./BTS test_dataset/grqc.bin 5242
 ```
 
 ## Datasets
@@ -49,6 +53,7 @@ mpirun -np 10 --hostfile yourhostsfile ./a.out /input/path/
 
 ### Synthetic graphs
 RMAT-k for k ∈ {21, 23, 25, 27, 29, 31} is a synthetic graph following RMAT model.
+we generate RMAT-k graphs using [TegViz](https://datalab.snu.ac.kr/tegviz/).
 We set RMAT parameters (a, b, c, d) to (0.57, 0.19, 0.19, 0.05).
 | Name      | #Nodes      | #Edges        |
 |-----------|-------------|---------------|
