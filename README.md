@@ -53,7 +53,7 @@ mpirun -np 10 --hostfile hosts ./BTS test_dataset/grqc.bin 5242
 
 ### Synthetic graphs
 RMAT-k for k ∈ {21, 23, 25, 27, 29, 31} is a synthetic graph following RMAT model.
-we generate RMAT-k graphs using [TegViz](https://datalab.snu.ac.kr/tegviz/).
+We generate RMAT-k graphs using [TegViz](https://datalab.snu.ac.kr/tegviz/).
 We set RMAT parameters (a, b, c, d) to (0.57, 0.19, 0.19, 0.05).
 | Name      | #Nodes      | #Edges        |
 |-----------|-------------|---------------|
